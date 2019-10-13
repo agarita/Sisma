@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" href="/app/app.component.css">
+  <link type="text/css" href="/app/app.component.css">
+  <link type="text/css" href="styles.css">
 </head>
 
 <body>
@@ -13,13 +14,19 @@
     >
     <div class="spacer"></div>
 
-    <div class="a">&nbsp;Iniciar Sesión&nbsp;</div>
-    <div class="a">&nbsp;Registrarse&nbsp;</div>
+    <div class="a" onclick="console.log('Hola mundo 2')">&nbsp;Iniciar Sesión&nbsp;</div>
+    <div class="a" onclick="console.log('Hola mundo 2')">&nbsp;Registrarse&nbsp;</div>
   </div>
 
   <div class="content" role="main">
-    
+    <h1>Bienvenido a Sisma</h1>
+    <p id="demo"></p>
+    <p>Un sistema de evaluaciones.</p>
   </div>
+
+  <footer>
+    <p style="color: antiquewhite;">Trademark</p>
+  </footer>
 
 </body>
 

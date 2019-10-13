@@ -8,44 +8,27 @@
 }
 
 body{
-    background-color: powderblue;
+    background-color: #90AFC5;
+    margin-inline: -8px;
 }
 
 h1 {
-    color: blue;
+    font-size: 32px;
 }
 
 p {
-    color: red;
+    font-size: 16px;
 }
 
 .spacer {
     flex: 1;
 }
 
-.toolbar{
-    height: 60px;
-    margin-top: -8px;
-    margin-left: -16px;
-    margin-right: -16px;
-    display: flex;
-    align-items: center;
-    background-color: #2a3132;
-    color: white;
-    font-weight: 600;
-}
-
-.toolbar img{
-    margin: 0 16px;
-}
-
 .a{
-    height: 60px;
-    width: auto;
-    background-color: #2a3132;
     border: 0;
     color: white;
     line-height: 60px;
+    background-color: #2a3132;
 }
 
 .a:hover{
@@ -54,8 +37,8 @@ p {
 
 .content{
     display: flex;
-    padding: 0 8px;
-    max-width: 960px;
     flex-direction: column;
     align-items: center;
+
 }
+
