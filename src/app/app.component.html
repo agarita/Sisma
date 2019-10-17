@@ -1,33 +1,93 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <link type="text/css" href="/app/app.component.css">
-  <link type="text/css" href="styles.css">
-</head>
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+body {font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, Serif;}
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Roboto";
+  letter-spacing: 5px;
+}
+</style>
 <body>
-  <div class="toolbar" role="banner">
-    <img
-      width="80"
-      alt="Logo"
-      src="\assets\LogoBlanco.png"
-    >
-    <div class="spacer"></div>
 
-    <div class="a" onclick="console.log('Hola mundo 2')">&nbsp;Iniciar Sesión&nbsp;</div>
-    <div class="a" onclick="console.log('Hola mundo 2')">&nbsp;Registrarse&nbsp;</div>
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-padding w3-card" style="letter-spacing:4px;background-color: #2a3132;color: #fff;">
+    <a href="#home">
+      <img class="w3-image" src="/assets/LogoBlanco.png" width="90" alt="Logo">
+    </a> 
+    <!-- Right-sided navbar links. Hide them on small screens -->
+    <div class="w3-right w3-hide-small w3-display-right">
+      <a href="#registrar" class="w3-bar-item w3-button">Registrarse</a>
+      <a href="#iniciarSesion" class="w3-bar-item w3-button">Iniciar Sesión</a>
+    </div>
+  </div>
+</div>
+
+<div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close">&times;</span>
+        <h2>Modal Header</h2>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the Modal Body</p>
+        <p>Some other text...</p>
+      </div>
+      <div class="modal-footer">
+        <h3>Modal Footer</h3>
+      </div>
+    </div>
+  
   </div>
 
-  <div class="content" role="main">
-    <h1>Bienvenido a Sisma</h1>
-    <p id="demo"></p>
-    <p>Un sistema de evaluaciones.</p>
+<!-- Page content -->
+<div class="w3-content w3-stretch" style="max-width:1100px;">
+  
+  <!-- Menu Section -->
+  <div class="w3-container" id="iniciarSesion">
+    <h1 class="w3-center w3-padding-64"><b>Iniciar Sesion</b></h1>
+    <form action="/action_page.php" target="_blank">
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Correo" required name="Correo"></p>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Contraseña" required name="Contraseña"></p>
+      <p><button class="w3-button w3-light-grey w3-section" type="submit">SEND MESSAGE</button></p>
+    </form>
   </div>
 
-  <footer>
-    <p style="color: antiquewhite;">Trademark</p>
-  </footer>
+  <hr>
+
+  <!-- Registrarse -->
+  <div class="w3-container" id="registrar">
+    <h1 class = "w3-center w3-padding-64"><b>Registrarse</b></h1><br>
+    <form action="/action_page.php" target="_blank">
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Nombre completo" required name="Nombre"></p>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Correo" required name="Correo"></p>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Contraseña" required name="Contraseña"></p>
+      <p><button class="w3-button w3-light-grey w3-section" type="submit">SEND MESSAGE</button></p>
+    </form>
+  </div>
+  
+<!-- End page content -->
+</div>
+
+<div id="id01" class="w3-modal">
+    <div class="w3-modal-content">
+      <div class="w3-container">
+        <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+        <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+        <p>Texto, texto</p>
+      </div>
+    </div>
+  </div>
+
+<!-- Footer -->
+<footer class="w3-center" style="background-color: #2a3132;">
+  <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black">Terminos y Condiciones</button>
+</footer>
 
 </body>
-
 </html>
