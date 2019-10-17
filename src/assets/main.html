@@ -9,63 +9,160 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Roboto";
   letter-spacing: 5px;
 }
+* {box-sizing: border-box;}
+ul {list-style-type: none;}
+
+.month {
+  padding: 70px 25px;
+  width: 100%;
+  background: #336B87;
+  text-align: center;
+  margin-top: 70px;
+}
+
+.month ul {
+  margin: 0;
+  padding: 0;
+}
+
+.month ul li {
+  color: white;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.month .prev {
+  float: left;
+  padding-top: 10px;
+}
+
+.month .next {
+  float: right;
+  padding-top: 10px;
+}
+
+.weekdays {
+  margin: 0;
+  padding: 10px 0;
+  background-color: #ddd;
+}
+
+.weekdays li {
+  display: inline-block;
+  width: 13.6%;
+  color: #666;
+  text-align: center;
+}
+
+.days {
+  padding: 10px 0;
+  background: #eee;
+  margin: 0;
+}
+
+.days li {
+  list-style-type: none;
+  display: inline-block;
+  width: 13.6%;
+  text-align: center;
+  margin-bottom: 5px;
+  font-size:12px;
+  color: #777;
+}
+
+.days li .active {
+  padding: 5px;
+  background: #1abc9c;
+  color: white !important
+}
+
+/* Add media queries for smaller screens */
+@media screen and (max-width:720px) {
+  .weekdays li, .days li {width: 13.1%;}
+}
+
+@media screen and (max-width: 420px) {
+  .weekdays li, .days li {width: 12.5%;}
+  .days li .active {padding: 2px;}
+}
+
+@media screen and (max-width: 290px) {
+  .weekdays li, .days li {width: 12.2%;}
+}
 </style>
 <body>
 
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
   <div class="w3-bar w3-card w3-padding" style="width:110%;letter-spacing:4px;background-color:#2a3132;color:#fff;">
-    <a href="#">
+    <a href="main.html">
       <img class="w3-image" src="/assets/LogoBlanco.png" width="90" alt="Logo">
     </a> 
-    <!-- Right-sided navbar links. Hide them on small screens -->
     <div class="w3-right w3-hide-small w3-display-right">
-      <a href="#registrar" class="w3-bar-item w3-button">Registrarse</a>
-      <a href="#iniciarSesion" class="w3-bar-item w3-button">Iniciar Sesión</a>
+      <a href="grupos.html" class="w3-bar-item w3-button">Grupo</a>
+      <a href="/app/app.component.html" class="w3-bar-item w3-button">Salir</a>
     </div>
   </div>
 </div>
 
 <!-- Page content -->
-<div class="w3-content w3-padding-64" style="max-width:1100px;">
-  
-  <!-- LogIn Section -->
-  <div class="w3-container" id="iniciarSesion">
-    <h1 class="w3-center w3-padding-64"><b>Iniciar Sesion</b></h1>
-    <form action="/action_page.php" target="_blank">
-      <p><input class="w3-input w3-padding-16" type="text" placeholder="Correo" required name="Correo"></p>
-      <p><input id="isPwd" class="w3-input w3-padding-16" type="password" placeholder="Contraseña" required name="Contraseña"></p>
-      <input type="checkbox" onclick="var x = document.getElementById('isPwd'); 
-                                      if(x.type === 'password'){
-                                        x.type='text';
-                                      }else{
-                                        x.type = 'password'
-                                      }"> Mostrar contraseña <br>
-      <a href="/assets/main.html"><button class="w3-button w3-light-grey w3-section" type="submit" style="border-radius: 8px;" href="">Iniciar Sesión</button></a>
-    </form>
+<div class="w3-content w3-middle" style="max-width:1100px;">
+  <div class="month">      
+  <ul>
+    <li class="prev">&#10094;</li>
+    <li class="next">&#10095;</li>
+    <li>
+      Octubre<br>
+      <span style="font-size:18px">2019</span>
+    </li>
+  </ul>
   </div>
 
-  <hr>
+  <ul class="weekdays">
+    <li>Lu</li>
+    <li>Ma</li>
+    <li>Mi</li>
+    <li>Ju</li>
+    <li>Vi</li>
+    <li>Sa</li>
+    <li>Do</li>
+  </ul>
 
-  <!-- Registrarse -->
-  <div class="w3-container" id="registrar">
-    <h1 class = "w3-center w3-padding-64"><b>Registrarse</b></h1><br>
-    <form action="/action_page.php" target="_blank">
-      <p><input class="w3-input w3-padding-16" type="text" placeholder="Nombre completo" required name="Nombre"></p>
-      <p><input class="w3-input w3-padding-16" type="text" placeholder="Correo" required name="Correo"></p>
-      <p><input id="registrarPwd" class="w3-input w3-padding-16" type="password" placeholder="Contraseña" required name="Contraseña"></p>
-      <input type="checkbox" onclick="var x = document.getElementById('registrarPwd'); 
-                                      if(x.type === 'password'){
-                                        x.type='text';
-                                      }else{
-                                        x.type = 'password'
-                                      }"> Mostrar contraseña <br>
-
-      <a href="/assets/main.html"><button class="w3-button w3-light-grey w3-section" type="submit" style="border-radius: 8px;">Registrarse</button></a>
-
-    </form>
-  </div>
-
+  <ul class="days">  
+    <li>&nbsp;</li>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+    <li>7</li>
+    <li>8</li>
+    <li>9</li>
+    <li>10</li>
+    <li>11</li>
+    <li>12</li>
+    <li>13</li>
+    <li>14</li>
+    <li>15</li>
+    <li>16</li>
+    <li><span class="active">17</span></li>
+    <li>18</li>
+    <li>19</li>
+    <li>20</li>
+    <li>21</li>
+    <li>22</li>
+    <li>23</li>
+    <li>24</li>
+    <li>25</li>
+    <li>26</li>
+    <li>27</li>
+    <li>28</li>
+    <li>29</li>
+    <li>30</li>
+    <li>31</li>
+  </ul>
 <!-- End page content -->
 </div>
 
@@ -114,7 +211,7 @@ h1, h2, h3, h4, h5, h6 {
 </div>
 
 <!-- Footer -->
-<footer class="w3-center" style="background-color: #2a3132;">
+<footer class="w3-center" style="background-color: #2a3132;height: 70px;">
   <button onclick="document.getElementById('id01').style.display='block'" style="background-color: #2a3132;border-radius: 8px; color: #fafafa" class="w3-button">Terminos y Condiciones</button>
 </footer>
 
