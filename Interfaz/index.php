@@ -16,7 +16,7 @@
 	h1, h2, h3, h4, h5, h6 {
 	  font-family: "Roboto";
 	  letter-spacing: 5px;
-	}
+		}
 	</style>
 </head>
 
@@ -41,7 +41,7 @@
 	  <!-- LogIn Section -->
 	  <div class="w3-container" id="iniciarSesion">
 	    <h1 class="w3-center w3-padding-64"><b>Iniciar Sesion</b></h1>
-	    <form id="myform" class="needs-validation" action="Scripts/form-login.php" novalidate="">
+	    <form id="myform" class="needs-validation" method="post" action="Scripts/form-login.php" novalidate="">
 				<div class="form-group row">
 					<div class="form-group col-md-12">
 						<?php
@@ -62,10 +62,16 @@
 				</div>
 				<div class="form-group row">
 					<div class="form-group col-md-12">
-						<input for="passLogin" id="isPwd" class="form-control w3-input w3-padding-16" type="password" placeholder="Contraseña" required name="Contraseña">
+						<input id="isPwd" name="passLogin" type="password" class="form-control w3-input w3-padding-16" placeholder="Contraseña" required>
 						<div class="invalid-feedback">
 							Por favor, ingrese la contraseña.
 						</div>
+						<input type="checkbox" onclick="var x = document.getElementById('isPwd');
+			                                      if(x.type === 'password'){
+			                                        x.type='text';
+			                                      }else{
+			                                        x.type = 'password'
+			                                      }"> Mostrar contraseña <br>
 					</div>
 				</div>
 
@@ -86,13 +92,6 @@
 						echo '</div>';
 					}
 				?>
-
-	      <input type="checkbox" onclick="var x = document.getElementById('isPwd');
-	                                      if(x.type === 'password'){
-	                                        x.type='text';
-	                                      }else{
-	                                        x.type = 'password'
-	                                      }"> Mostrar contraseña <br>
 	      <button class="w3-button w3-light-grey w3-section" style="border-radius: 8px;" form="myform" type="submit" name="submit">Iniciar Sesión</button>
 	    </form>
 	  </div>
@@ -101,92 +100,86 @@
 
 	  <!-- Registrarse -->
 	  <div class="w3-container" id="registrar">
-	    <h1 class = "w3-center w3-padding-64"><b>Registrarse</b></h1><br>
+	    <h1 class = "w3-center w3-padding-64"><b>Registrarse</b></h1>
 	    <form id="myform2" method="post" class="need-validation" action="Scripts/form-register.php" novalidate="" enctype="multipart/form-data">
-				<div class="form-row">
-					<div class="form-group col-md-12">
-						<?php
-							if (isset($_GET['Nombre']))
-							{
-								$pNombre = $_GET['Nombre'];
-								echo '<input name="name-input" type="text" class="form-control w3-input w3-padding-16" placeholder="Nombre" value="'.$pNombre.'" required>';
-							}
-							else
-							{
-								echo '<input name="name-input" type="text" class="form-control w3-input w3-padding-16" placeholder="Nombre" required>';
-							}
-						?>
-						<div class="invalid-feedback">
-							Campo requerido.
-						</div>
+				<div class="form-group row">
+					<?php
+						if (isset($_GET['Nombre']))
+						{
+							$pNombre = $_GET['Nombre'];
+							echo '<input name="name-input" type="text" class="form-control w3-input w3-padding-16" placeholder="Nombre" value="'.$pNombre.'" required>';
+						}
+						else
+						{
+							echo '<input name="name-input" type="text" class="form-control w3-input w3-padding-16" placeholder="Nombre" required>';
+						}
+					?>
+					<div class="invalid-feedback">
+						Campo requerido.
 					</div>
 				</div>
-				<div class="form-row">
-					<div class="form-group col-md-12">
-						<?php
-							if (isset($_GET['pApellido']))
-							{
-								$pApellido = $_GET['pApellido'];
-								echo '<input name="lastname-input" type="text" class="form-control w3-input w3-padding-16" placeholder="Apellidos" value="'.$pApellido.'" required>';
-							}
-							else
-							{
-								echo '<input name="lastname-input" type="text" class="form-control w3-input w3-padding-16" placeholder="Apellidos" required>';
-							}
-						?>
-						<div class="invalid-feedback">
-							Campo requerido.
-						</div>
+				<div class="form-group row">
+					<?php
+						if (isset($_GET['pApellido']))
+						{
+							$pApellido = $_GET['pApellido'];
+							echo '<input name="lastname-input" type="text" class="form-control w3-input w3-padding-16" placeholder="Apellidos" value="'.$pApellido.'" required>';
+						}
+						else
+						{
+							echo '<input name="lastname-input" type="text" class="form-control w3-input w3-padding-16" placeholder="Apellidos" required>';
+						}
+					?>
+					<div class="invalid-feedback">
+						Campo requerido.
 					</div>
 				</div>
-				<div class="form-row">
-					<div class="form-group col-md-12">
-						<?php
-							if (isset($_GET['pCorreo']))
-							{
-								$pCorreo = $_GET['pCorreo'];
-								echo '<input name="mail-input" type="text" class="form-control w3-input w3-padding-16" pattern=".+@.+\.(com|es)" placeholder="Correo" value="'.$pCorreo.'" required>';
-							}
-							else
-							{
-								echo '<input name="mail-input" type="text" class="form-control w3-input w3-padding-16" pattern=".+@.+\.(com|es)" placeholder="Correo" required>';
-							}
-						?>
-						<div class="invalid-feedback">
-							Campo requerido.
-						</div>
+				<div class="form-group row">
+					<?php
+						if (isset($_GET['pCorreo']))
+						{
+							$pCorreo = $_GET['pCorreo'];
+							echo '<input name="mail-input" type="text" class="form-control w3-input w3-padding-16" pattern=".+@.+\.(com|es)" placeholder="Correo" value="'.$pCorreo.'" required>';
+						}
+						else
+						{
+							echo '<input name="mail-input" type="text" class="form-control w3-input w3-padding-16" pattern=".+@.+\.(com|es)" placeholder="Correo" required>';
+						}
+					?>
+					<div class="invalid-feedback">
+						Campo requerido.
 					</div>
 				</div>
-				<div class="form-row">
-					<div class="form-group col-md-12">
-						<input id="registrarPwd" name="passwd-input" type="password" class="form-control w3-input w3-padding-16" placeholder="Contraseña" required>
-						<input type="checkbox" onclick="var x = document.getElementById('registrarPwd');
-			                                      if(x.type === 'password'){
-			                                        x.type='text';
-			                                      }else{
-			                                        x.type = 'password'
-			                                      }"> Mostrar contraseña <br>
-						<div class="invalid-feedback">
-							Campo requerido.
-						</div>
+				<div class="form-group row">
+					<input id="registrarPwd" name="passwd-input" type="password" class="form-control w3-input w3-padding-16" placeholder="Contraseña" required>
+					<input type="checkbox" onclick="var x = document.getElementById('registrarPwd');
+			                                    if(x.type === 'password'){
+																						x.type='text';
+																					}else{
+																						x.type = 'password'
+																					}"> Mostrar contraseña <br>
+					<div class="invalid-feedback">
+						Campo requerido.
 					</div>
 				</div>
 
 				<?php
 					if (isset($_GET['signup']))
 					{
-						echo '<div class="form row justify-content-center" style="margin: 10% 0 0 0">';
+						echo '<div class="form row justify-content-center" style="margin: 0 0 -5% 0">';
 						echo '<div class="alert alert-danger" role="alert">';
 						$signUpError = $_GET['signup'];
 
 						if ($signUpError == 'duplicate')
 							echo 'El correo ingresada ya existe en el sistema.';
+						elseif ($signUpError == 'empty')
+							echo 'Algún campo está vacio';
 						echo '</div>';
 						echo '</div>';
 					}
 				?>
 
-				<button id="btnSignIn" class="w3-button w3-light-grey w3-section" style="border-radius: 8px;" form="myform2" type="submit" name="submit2">Registrarse</button>
+				<button id="btnSignIn" class="w3-button w3-light-grey w3-section" style="border-radius: 8px;" form="myform2" type="submit" name="submit">Registrarse</button>
 	    </form>
 	  </div>
 
