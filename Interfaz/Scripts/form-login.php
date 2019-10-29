@@ -32,20 +32,7 @@
 
                     $stmt->closeCursor();
 
-                    if ($_SESSION['tipo'] == 3)
-                    {
-                        $stmt = $conn->query("select `buscarIdComercio`('$pEmail');");
-                        $row = $stmt->fetch(PDO::FETCH_NUM);
-
-                        $_SESSION['comercio'] = $row[0];
-                    }
-                    elseif ($_SESSION['tipo'] == 2)
-                    {
-                        $stmt = $conn->query("select `buscarIdCentro`('$pEmail');");
-                        $row = $stmt->fetch(PDO::FETCH_NUM);
-
-                        $_SESSION['centro'] = $row[0];
-                    }
+                    
 
                     header("Location: ../main.php?login=success");
                 }

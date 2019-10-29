@@ -106,6 +106,8 @@ ul {list-style-type: none;}
   </div>
 </div>
 
+<br><br><br>
+
 <!-- Page content -->
 <div class="w3-content w3-middle" style="max-width:1100px;">
   <div class="month">
@@ -147,7 +149,7 @@ ul {list-style-type: none;}
     <li>14</li>
     <li>15</li>
     <li>16</li>
-    <li><span class="active">17</span></li>
+    <li>17</li>
     <li>18</li>
     <li>19</li>
     <li>20</li>
@@ -159,7 +161,7 @@ ul {list-style-type: none;}
     <li>26</li>
     <li>27</li>
     <li>28</li>
-    <li>29</li>
+    <li><span class="active">29</span></li>
     <li>30</li>
     <li>31</li>
   </ul>
@@ -209,6 +211,8 @@ ul {list-style-type: none;}
       </div>
     </div>
 </div>
+
+<br><br><br>
 
 <!-- Footer -->
 <footer class="w3-center" style="background-color: #2a3132;height: 70px;">

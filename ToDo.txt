@@ -1,0 +1,6 @@
++ Hacer manual técnico
++ About
++ buscarIdEstudiante(email)
++ buscarIdProfesor(email)
++ insertarProfesor('$pNombre', '$pApellido', '$pEmail', '$passwd')
++ insertarEstudiante('$pNombre', '$pApellido', '$pEmail', '$passwd') = insertarUsuario
