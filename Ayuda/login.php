@@ -56,7 +56,7 @@
 						<div class="form-group row">
 							<label for="passwd-input" class="col-sm-12 col-m-12 col-lg-6 col-form-label">Contraseña:</label>
 							<div class="col-lg-6 col-md-12 col-sm-12 col-12">
-	  							<input name="passwd-input" type="password" class="form-control" placeholder="Contraseña" required>
+	  						<input name="passwd-input" type="password" class="form-control" placeholder="Contraseña" required>
 								<div class="invalid-feedback">
 									Por favor, ingrese la contraseña.
 								</div>
