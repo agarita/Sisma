@@ -56,22 +56,22 @@ END$$
 DELIMITER ;
 
 DELIMITER $$
-CREATE DEFINER=`root`@`localhost` PROCEDURE `verNotasXPeriodo`(IN `@idPeriodo` INT, IN `@idCurso` INT) 
-	NO SQL
-	SELECT persona.Nombre, persona.Apellido, evaluacionxpersona.nota 
-	FROM persona JOIN evaluacionxpersona on persona.idPersona = evaluacionxpersona.idPersona 
-	JOIN evaluacionxcurso on evaluacionxpersona.idEvaluacion = evaluacionxcurso.idEvaluacion 
-	JOIN evaluacion on evaluacionxpersona.idEvaluacion = evaluacion.idEvaluacion 
-	WHERE evaluacionxcurso.idCurso = @idCurso AND evaluacion.idPeriodo = @idPeriodo
+CREATE DEFINER=`root`@`localhost` PROCEDURE `verNotasXPeriodo`(IN `@idPeriodo` INT, IN `@idCurso` INT)
+	READS SQL
+	SELECT persona.Nombre, persona.Apellido, evaluacionxpersona.nota
+	FROM persona JOIN evaluacionxpersona on persona.idPersona = evaluacionxpersona.idPersona
+	             JOIN evaluacionxcurso on evaluacionxpersona.idEvaluacion = evaluacionxcurso.idEvaluacion
+	             JOIN evaluacion on evaluacionxpersona.idEvaluacion = evaluacion.idEvaluacion
+	             WHERE evaluacionxcurso.idCurso = @idCurso AND evaluacion.idPeriodo = @idPeriodo
 DELIMITER ;
 
 DELIMITER $$
-CREATE DEFINER=`root`@`localhost` PROCEDURE `verNotasFinales`(IN `@idCurso` INT) 
-	NO SQL
+CREATE DEFINER=`root`@`localhost` PROCEDURE `verNotasFinales`(IN `@idCurso` INT)
+	READS SQL
 	SELECT persona.Nombre, persona.Apellido, SUM(evaluacionxpersona.nota)
-	FROM persona JOIN evaluacionxpersona on persona.idPersona = evaluacionxpersona.idPersona 
-	JOIN evaluacionxcurso on evaluacionxpersona.idEvaluacion = evaluacionxcurso.idEvaluacion 
-	JOIN evaluacion on evaluacionxpersona.idEvaluacion = evaluacion.idEvaluacion 
+	FROM persona JOIN evaluacionxpersona on persona.idPersona = evaluacionxpersona.idPersona
+	JOIN evaluacionxcurso on evaluacionxpersona.idEvaluacion = evaluacionxcurso.idEvaluacion
+	JOIN evaluacion on evaluacionxpersona.idEvaluacion = evaluacion.idEvaluacion
 	WHERE evaluacionxcurso.idCurso = @idCurso GROUP BY (idPeriodo)
 DELIMITER ;
 
@@ -83,4 +83,3 @@ BEGIN
     VALUES (`@idEvaluacion`, `@idPersona`, `@nota`);
 END$$
 DELIMITER ;
-

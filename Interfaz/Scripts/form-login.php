@@ -32,9 +32,7 @@
 
                     $stmt->closeCursor();
 
-                    
-
-                    header("Location: ../main.php?login=success");
+                    header("Location: ../home.php?login=success");
                 }
                 else
                     header("Location: ../index.php?login=error&email=$pEmail");
