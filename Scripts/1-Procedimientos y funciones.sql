@@ -54,3 +54,33 @@ BEGIN
 			WHERE email = pCorreo);
 END$$
 DELIMITER ;
+
+DELIMITER $$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `verNotasXPeriodo`(IN `@idPeriodo` INT, IN `@idCurso` INT) 
+	NO SQL
+	SELECT persona.Nombre, persona.Apellido, evaluacionxpersona.nota 
+	FROM persona JOIN evaluacionxpersona on persona.idPersona = evaluacionxpersona.idPersona 
+	JOIN evaluacionxcurso on evaluacionxpersona.idEvaluacion = evaluacionxcurso.idEvaluacion 
+	JOIN evaluacion on evaluacionxpersona.idEvaluacion = evaluacion.idEvaluacion 
+	WHERE evaluacionxcurso.idCurso = @idCurso AND evaluacion.idPeriodo = @idPeriodo
+DELIMITER ;
+
+DELIMITER $$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `verNotasFinales`(IN `@idCurso` INT) 
+	NO SQL
+	SELECT persona.Nombre, persona.Apellido, SUM(evaluacionxpersona.nota)
+	FROM persona JOIN evaluacionxpersona on persona.idPersona = evaluacionxpersona.idPersona 
+	JOIN evaluacionxcurso on evaluacionxpersona.idEvaluacion = evaluacionxcurso.idEvaluacion 
+	JOIN evaluacion on evaluacionxpersona.idEvaluacion = evaluacion.idEvaluacion 
+	WHERE evaluacionxcurso.idCurso = @idCurso GROUP BY (idPeriodo)
+DELIMITER ;
+
+DELIMITER $$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `insertarEvaluacionEstudiante`(IN `@idEvaluacion` INT, IN `@idPersona` INT, IN `@nota` INT)
+    MODIFIES SQL DATA
+BEGIN
+	INSERT INTO `evaluacionxpersona`(`idEvaluacion`, `idPersona`, `nota`)
+    VALUES (`@idEvaluacion`, `@idPersona`, `@nota`);
+END$$
+DELIMITER ;
+
