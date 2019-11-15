@@ -1,35 +1,23 @@
 <?php
     include_once 'header.php';
+    include_once 'scripts/conexion.inc'
 ?>
-
-<!-- Page content -->
 <div class="w3-content w3-padding-64" style="max-width:1100px;margin-top: 70px;">
-  <a onclick="var x = document.getElementById('septimo');
-              if (x.style.display === 'none') {
-              x.style.display = 'block';
-              } else {
-              x.style.display = 'none';
-              }"><h1>Septimo&#9655</h1></a>
+<?php
 
-  <div id="septimo" style="display: none;">
-    <a href="grupoEspecifico.php"><h4 style="margin-left:80px;">Estudios Sociales</h4></a>
-    <a href="grupoEspecifico.php"><h4 style="margin-left:80px;">Ciencias</h4></a>
-  </div>
+      $stmt = $conn->query("SELECT * FROM curso WHERE anho = EXTRACT(YEAR FROM CURRENT_DATE) and idProfesor = 4 ");
 
-  <a onclick="var x = document.getElementById('octavo');
-              if (x.style.display === 'none') {
-              x.style.display = 'block';
-              } else {
-              x.style.display = 'none';
-              }"><h1>Octavo&#9655</h1></a>
 
-  <div id="octavo"  style="display: none;">
-    <a href="grupoEspecifico.php"><h4 style="margin-left:80px;">Estudios Sociales</h4></a>
-    <a href="grupoEspecifico.php"><h4 style="margin-left:80px;">Ciencias</h4></a>
-  </div>
-<!-- End page content -->
+      while ($r = $stmt->fetch(PDO::FETCH_NUM))
+      {?>
+        <a href=<?php echo 'grupoEspecifico.php?curso=' .$r[0] ?>
+        ><h4 style="margin-left:80px;"><?php echo  $r[1]. ' '.$r[4] ?></h4></a>
+      <?php 
+      }?>
+
+      
+
 </div>
-
 <?php
    include_once 'footer.php';
 ?>
