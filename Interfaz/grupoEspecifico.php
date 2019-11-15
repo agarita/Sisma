@@ -7,7 +7,7 @@
   if (isset($_SESSION['tipo']))
   {
     $tipo = $_SESSION['tipo'];
-    $pCorreo = $_SESSION['pCorreo'];
+    //$pCorreo = $_SESSION['pCorreo'];
     $pCurso = 'caca'; //$_GET['curso'];
     switch ($tipo)
     {

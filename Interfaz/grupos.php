@@ -10,12 +10,12 @@
 
       while ($r = $stmt->fetch(PDO::FETCH_NUM))
       {?>
-        <a href=<?php echo 'grupoEspecifico.php?curso=' .$r[0] ?>
+        <a href=<?php echo 'verNotas.php?curso=' .$r[0] ?>
         ><h4 style="margin-left:80px;"><?php echo  $r[1]. ' '.$r[4] ?></h4></a>
-      <?php 
+      <?php
       }?>
 
-      
+
 
 </div>
 <?php
