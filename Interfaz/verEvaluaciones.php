@@ -43,25 +43,48 @@
         echo "</tbody>";
       echo "</table>";
       break;
+
       case 2: //Profesor
-      echo "<table width='100%' class='table table-fixed table-bordered table-hover table-condensed table-hover' id='data' style='font-size: 11px;'>";
-        echo "<thead style='background-color: #f8f8f8;'>";
-          echo '<tr>';
-            echo "<th> <h6>Nombre</th>";
-          $stmt = $conn->query("SELECT e.descripcion FROM Evaluacion e INNER JOIN evaluacionxcurso exc ON e.idEvaluacion = exc.idEvaluacion WHERE exc.idCurso = '".$pCurso."'");
 
-          while ($row = $stmt->fetch(PDO::FETCH_NUM))
-          {
-            echo "<th> <h6>" . $row[0] . "</th>";
-          }
-          echo '</tr>';
-        echo '</thead>';
-        echo '<tbody>';
+     ?>
+    <div class="w3-content w3-padding-64" style="max-width:1100px;margin-top: 70px;">
+    <?php
+
+      $stmt = $conn->query("SELECT u.idUsuario, CONCAT(u.nombre,' ', u.apellido) FROM Usuario u
+          INNER JOIN UsuarioXCurso uxc ON u.idUsuario = uxc.idEstudiante WHERE uxc.idCurso = '".$pCurso."'");
+
+      while ($r = $stmt->fetch(PDO::FETCH_NUM))
+      {?>
+        <a onclick="var x = document.getElementById(<?php echo $r[0]?>);
+              if (x.style.display === 'none') {
+              x.style.display = 'block';
+              } else {
+              x.style.display = 'none';
+              }"><h1><?php  echo "".$r[1]?>&#9655</h1></a>
+        <div id="<?php  echo $r[0]?>" style="display: none;">
+          <?php 
 
 
+          $consulta = "SELECT e.descripcion, e.valor, exu.nota FROM `evaluacion` e
+        INNER JOIN `evaluacionxusuario` exu ON e.idEvaluacion = exu.idEvaluacion
+        INNER JOIN `evaluacionxcurso` exc ON e.idEvaluacion = exc.idEvaluacion
+        INNER JOIN `usuario` u ON exu.idUsuario = u.idUsuario
+        WHERE exc.idCurso = '".$pCurso."' AND u.idUsuario = '".$r[0]."'";
 
-        echo "</tbody>";
-      echo "</table>";
+          $t = mysqli_query($link,$consulta);
+          
+          
+          while ($r1 = mysqli_fetch_assoc($t))
+          {?>
+             <h4 style="margin-left:80px;"><?php echo  $r1['descripcion']. ' ........................... '.$r1['nota'] ?></h4></a>
+              <?php 
+          }?>
+        </div>
+      <?php
+      }
+      ?>
+        </div>
+      <?php
       break;
       default:
     }
