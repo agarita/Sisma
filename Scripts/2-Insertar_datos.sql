@@ -49,32 +49,28 @@ INSERT INTO `usuarioxcurso`(`idEstudiante`, `idCurso`, `nota`) VALUES (3,1,72);
 INSERT INTO `usuarioxcurso`(`idEstudiante`, `idCurso`, `nota`) VALUES (1,4,0);
 INSERT INTO `usuarioxcurso`(`idEstudiante`, `idCurso`, `nota`) VALUES (2,4,0);
 INSERT INTO `usuarioxcurso`(`idEstudiante`, `idCurso`, `nota`) VALUES (3,4,0);
-INSERT INTO `usuarioxcurso`(`idEstudiante`, `idCurso`, `nota`) VALUES (1,4,0);
-INSERT INTO `usuarioxcurso`(`idEstudiante`, `idCurso`, `nota`) VALUES (2,4,0);
-INSERT INTO `usuarioxcurso`(`idEstudiante`, `idCurso`, `nota`) VALUES (3,4,0);
 
+INSERT INTO `evaluacion`(`fechaEntrega`, `descripcion`, `valor`, `idPeriodo`) VALUES ('2019-1-1', 'Examen 1', 10, 1);
+INSERT INTO `evaluacion`(`fechaEntrega`, `descripcion`, `valor`, `idPeriodo`) VALUES ('2019-1-1', 'Examen 2', 10, 1);
+INSERT INTO `evaluacion`(`fechaEntrega`, `descripcion`, `valor`, `idPeriodo`) VALUES ('2019-1-1', 'Lab 0', 10, 1);
+INSERT INTO `evaluacion`(`fechaEntrega`, `descripcion`, `valor`, `idPeriodo`) VALUES ('2019-1-1', 'Lab 1', 10, 1);
+INSERT INTO `evaluacion`(`fechaEntrega`, `descripcion`, `valor`, `idPeriodo`) VALUES ('2019-1-1', 'Lab 2', 10, 1);
+INSERT INTO `evaluacion`(`fechaEntrega`, `descripcion`, `valor`, `idPeriodo`) VALUES ('2019-1-1', 'Lab 3', 10, 1);
+INSERT INTO `evaluacion`(`fechaEntrega`, `descripcion`, `valor`, `idPeriodo`) VALUES ('2019-1-1', 'Tarea 0', 10, 1);
+INSERT INTO `evaluacion`(`fechaEntrega`, `descripcion`, `valor`, `idPeriodo`) VALUES ('2019-1-1', 'Tarea 1', 10, 1);
+INSERT INTO `evaluacion`(`fechaEntrega`, `descripcion`, `valor`, `idPeriodo`) VALUES ('2019-1-1', 'Tarea 2', 10, 1);
+INSERT INTO `evaluacion`(`fechaEntrega`, `descripcion`, `valor`, `idPeriodo`) VALUES ('2019-1-1', 'Tarea 3', 10, 1);
 
-INSERT INTO `evaluacion`(`fechaEntrega`, `descripcion`, `valor`, `idPeriodo`) VALUES ('2019-1-1', 'asdada', 10, 1);
-INSERT INTO `evaluacion`(`fechaEntrega`, `descripcion`, `valor`, `idPeriodo`) VALUES ('2019-1-1', 'asdada', 10, 1);
-INSERT INTO `evaluacion`(`fechaEntrega`, `descripcion`, `valor`, `idPeriodo`) VALUES ('2019-1-1', 'asdada', 10, 1);
-INSERT INTO `evaluacion`(`fechaEntrega`, `descripcion`, `valor`, `idPeriodo`) VALUES ('2019-1-1', 'asdada', 10, 1);
-INSERT INTO `evaluacion`(`fechaEntrega`, `descripcion`, `valor`, `idPeriodo`) VALUES ('2019-1-1', 'asdada', 10, 1);
-INSERT INTO `evaluacion`(`fechaEntrega`, `descripcion`, `valor`, `idPeriodo`) VALUES ('2019-1-1', 'asdada', 10, 1);
-INSERT INTO `evaluacion`(`fechaEntrega`, `descripcion`, `valor`, `idPeriodo`) VALUES ('2019-1-1', 'asdada', 10, 1);
-INSERT INTO `evaluacion`(`fechaEntrega`, `descripcion`, `valor`, `idPeriodo`) VALUES ('2019-1-1', 'asdada', 10, 1);
-INSERT INTO `evaluacion`(`fechaEntrega`, `descripcion`, `valor`, `idPeriodo`) VALUES ('2019-1-1', 'asdada', 10, 1);
-INSERT INTO `evaluacion`(`fechaEntrega`, `descripcion`, `valor`, `idPeriodo`) VALUES ('2019-1-1', 'asdada', 10, 1);
-
-INSERT INTO `evaluacion`(`fechaEntrega`, `descripcion`, `valor`, `idPeriodo`) VALUES ('2019-1-1', 'asdada', 10, 2);
-INSERT INTO `evaluacion`(`fechaEntrega`, `descripcion`, `valor`, `idPeriodo`) VALUES ('2019-1-1', 'asdada', 10, 2);
-INSERT INTO `evaluacion`(`fechaEntrega`, `descripcion`, `valor`, `idPeriodo`) VALUES ('2019-1-1', 'asdada', 10, 2);
-INSERT INTO `evaluacion`(`fechaEntrega`, `descripcion`, `valor`, `idPeriodo`) VALUES ('2019-1-1', 'asdada', 10, 2);
-INSERT INTO `evaluacion`(`fechaEntrega`, `descripcion`, `valor`, `idPeriodo`) VALUES ('2019-1-1', 'asdada', 10, 2);
-INSERT INTO `evaluacion`(`fechaEntrega`, `descripcion`, `valor`, `idPeriodo`) VALUES ('2019-1-1', 'asdada', 10, 2);
-INSERT INTO `evaluacion`(`fechaEntrega`, `descripcion`, `valor`, `idPeriodo`) VALUES ('2019-1-1', 'asdada', 10, 2);
-INSERT INTO `evaluacion`(`fechaEntrega`, `descripcion`, `valor`, `idPeriodo`) VALUES ('2019-1-1', 'asdada', 10, 2);
-INSERT INTO `evaluacion`(`fechaEntrega`, `descripcion`, `valor`, `idPeriodo`) VALUES ('2019-1-1', 'asdada', 10, 2);
-INSERT INTO `evaluacion`(`fechaEntrega`, `descripcion`, `valor`, `idPeriodo`) VALUES ('2019-1-1', 'asdada', 10, 2);
+INSERT INTO `evaluacion`(`fechaEntrega`, `descripcion`, `valor`, `idPeriodo`) VALUES ('2019-1-1', 'Examen 3', 10, 2);
+INSERT INTO `evaluacion`(`fechaEntrega`, `descripcion`, `valor`, `idPeriodo`) VALUES ('2019-1-1', 'Examen 4', 10, 2);
+INSERT INTO `evaluacion`(`fechaEntrega`, `descripcion`, `valor`, `idPeriodo`) VALUES ('2019-1-1', 'Lab 4', 10, 2);
+INSERT INTO `evaluacion`(`fechaEntrega`, `descripcion`, `valor`, `idPeriodo`) VALUES ('2019-1-1', 'Lab 5', 10, 2);
+INSERT INTO `evaluacion`(`fechaEntrega`, `descripcion`, `valor`, `idPeriodo`) VALUES ('2019-1-1', 'Lab 6', 10, 2);
+INSERT INTO `evaluacion`(`fechaEntrega`, `descripcion`, `valor`, `idPeriodo`) VALUES ('2019-1-1', 'Lab 7', 10, 2);
+INSERT INTO `evaluacion`(`fechaEntrega`, `descripcion`, `valor`, `idPeriodo`) VALUES ('2019-1-1', 'Tarea 4', 10, 2);
+INSERT INTO `evaluacion`(`fechaEntrega`, `descripcion`, `valor`, `idPeriodo`) VALUES ('2019-1-1', 'Tarea 5', 10, 2);
+INSERT INTO `evaluacion`(`fechaEntrega`, `descripcion`, `valor`, `idPeriodo`) VALUES ('2019-1-1', 'Tarea 6', 10, 2);
+INSERT INTO `evaluacion`(`fechaEntrega`, `descripcion`, `valor`, `idPeriodo`) VALUES ('2019-1-1', 'Tarea 7', 10, 2);
 
 
 
@@ -100,34 +96,24 @@ INSERT INTO `evaluacionxusuario`(`idEvaluacion` , `idUsuario`,  `nota`) VALUES (
 INSERT INTO `evaluacionxusuario`(`idEvaluacion` , `idUsuario`,  `nota`) VALUES (19,1,90);
 INSERT INTO `evaluacionxusuario`(`idEvaluacion` , `idUsuario`,  `nota`) VALUES (20,1,70);
 
-INSERT INTO `evaluacionxcurso`(`idCurso` , `idEvaluacion`) VALUES (1,1);
-INSERT INTO `evaluacionxcurso`(`idCurso` , `idEvaluacion`) VALUES (1,2);
-INSERT INTO `evaluacionxcurso`(`idCurso` , `idEvaluacion`) VALUES (1,3);
-INSERT INTO `evaluacionxcurso`(`idCurso` , `idEvaluacion`) VALUES (1,4);
-INSERT INTO `evaluacionxcurso`(`idCurso` , `idEvaluacion`) VALUES (1,5);
-INSERT INTO `evaluacionxcurso`(`idCurso` , `idEvaluacion`) VALUES (1,6);
-INSERT INTO `evaluacionxcurso`(`idCurso` , `idEvaluacion`) VALUES (1,7);
-INSERT INTO `evaluacionxcurso`(`idCurso` , `idEvaluacion`) VALUES (1,8);
-INSERT INTO `evaluacionxcurso`(`idCurso` , `idEvaluacion`) VALUES (1,9);
-INSERT INTO `evaluacionxcurso`(`idCurso` , `idEvaluacion`) VALUES (1,10);
+INSERT INTO `evaluacionxcurso`(`idCurso` , `idEvaluacion`) VALUES (4,1);
+INSERT INTO `evaluacionxcurso`(`idCurso` , `idEvaluacion`) VALUES (4,2);
+INSERT INTO `evaluacionxcurso`(`idCurso` , `idEvaluacion`) VALUES (4,3);
+INSERT INTO `evaluacionxcurso`(`idCurso` , `idEvaluacion`) VALUES (4,4);
+INSERT INTO `evaluacionxcurso`(`idCurso` , `idEvaluacion`) VALUES (4,5);
+INSERT INTO `evaluacionxcurso`(`idCurso` , `idEvaluacion`) VALUES (4,6);
+INSERT INTO `evaluacionxcurso`(`idCurso` , `idEvaluacion`) VALUES (4,7);
+INSERT INTO `evaluacionxcurso`(`idCurso` , `idEvaluacion`) VALUES (4,8);
+INSERT INTO `evaluacionxcurso`(`idCurso` , `idEvaluacion`) VALUES (4,9);
+INSERT INTO `evaluacionxcurso`(`idCurso` , `idEvaluacion`) VALUES (4,10);
 
-INSERT INTO `evaluacionxcurso`(`idCurso` , `idEvaluacion`) VALUES (1,11);
-INSERT INTO `evaluacionxcurso`(`idCurso` , `idEvaluacion`) VALUES (1,12);
-INSERT INTO `evaluacionxcurso`(`idCurso` , `idEvaluacion`) VALUES (1,13);
-INSERT INTO `evaluacionxcurso`(`idCurso` , `idEvaluacion`) VALUES (1,14);
-INSERT INTO `evaluacionxcurso`(`idCurso` , `idEvaluacion`) VALUES (1,15);
-INSERT INTO `evaluacionxcurso`(`idCurso` , `idEvaluacion`) VALUES (1,16);
-INSERT INTO `evaluacionxcurso`(`idCurso` , `idEvaluacion`) VALUES (1,17);
-INSERT INTO `evaluacionxcurso`(`idCurso` , `idEvaluacion`) VALUES (1,18);
-INSERT INTO `evaluacionxcurso`(`idCurso` , `idEvaluacion`) VALUES (1,19);
-INSERT INTO `evaluacionxcurso`(`idCurso` , `idEvaluacion`) VALUES (1,20);
-
-
-
-
-
-
-
-
-
-
+INSERT INTO `evaluacionxcurso`(`idCurso` , `idEvaluacion`) VALUES (4,11);
+INSERT INTO `evaluacionxcurso`(`idCurso` , `idEvaluacion`) VALUES (4,12);
+INSERT INTO `evaluacionxcurso`(`idCurso` , `idEvaluacion`) VALUES (4,13);
+INSERT INTO `evaluacionxcurso`(`idCurso` , `idEvaluacion`) VALUES (4,14);
+INSERT INTO `evaluacionxcurso`(`idCurso` , `idEvaluacion`) VALUES (4,15);
+INSERT INTO `evaluacionxcurso`(`idCurso` , `idEvaluacion`) VALUES (4,16);
+INSERT INTO `evaluacionxcurso`(`idCurso` , `idEvaluacion`) VALUES (4,17);
+INSERT INTO `evaluacionxcurso`(`idCurso` , `idEvaluacion`) VALUES (4,18);
+INSERT INTO `evaluacionxcurso`(`idCurso` , `idEvaluacion`) VALUES (4,19);
+INSERT INTO `evaluacionxcurso`(`idCurso` , `idEvaluacion`) VALUES (4,20);

@@ -136,10 +136,10 @@
 				</div>
 				<div class="form-group row">
 					<?php
-						if (isset($_GET['pCorreo']))
+						if (isset($_GET['pEmail']))
 						{
-							$pCorreo = $_GET['pCorreo'];
-							echo '<input name="mail-input" type="text" class="form-control w3-input w3-padding-16" pattern=".+@.+\.(com|es)" placeholder="Correo" value="'.$pCorreo.'" required>';
+							$pEmail = $_GET['pEmail'];
+							echo '<input name="mail-input" type="text" class="form-control w3-input w3-padding-16" pattern=".+@.+\.(com|es)" placeholder="Correo" value="'.$pEmail.'" required>';
 						}
 						else
 						{
