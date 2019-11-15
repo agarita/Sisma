@@ -8,7 +8,7 @@
   {
     $tipo = $_SESSION['tipo'];
     //$pCorreo = $_SESSION['pCorreo'];
-    $pCurso = 'caca'; //$_GET['curso'];
+    $pCurso = $_GET['curso'];
     switch ($tipo)
     {
       case 1: // Estudiante
