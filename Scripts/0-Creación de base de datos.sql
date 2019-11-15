@@ -64,7 +64,7 @@ ENGINE = InnoDB;
 CREATE TABLE IF NOT EXISTS `dbSisma`.`Curso` (
   `idCurso` INT NOT NULL AUTO_INCREMENT,
   `nombre` NVARCHAR(50) NOT NULL,
-  `anho` DATE NOT NULL,
+  `anho` INT NOT NULL,
   `idProfesor` INT NOT NULL,
   `idGrado` INT NOT NULL,
   PRIMARY KEY (`idCurso`),
